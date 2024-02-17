@@ -8,6 +8,7 @@ module.exports = {
   // Where webpack looks to start building the bundle
   entry: [paths.src + '/index.js'],
 
+  devtool: 'inline-source-map',
   // Where webpack outputs the assets and bundles
   output: {
     path: paths.build,
@@ -37,8 +38,8 @@ module.exports = {
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
-      title: 'webpack Boilerplate',
-      favicon: paths.src + '/images/favicon.png',
+      title: 'webpack Boilerplate with backbone baseline',
+      favicon: paths.src + '/images/favicon.ico',
       template: paths.src + '/template.html', // template file
       filename: 'index.html', // output file
     }),
